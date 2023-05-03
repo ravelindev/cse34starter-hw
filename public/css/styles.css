@@ -4,3 +4,49 @@
 *:after {
   box-sizing: border-box;
 }
+
+/* Top Header */
+#top-header{
+  display: flex;
+  justify-content: space-between;
+  font-size: x-large;
+  padding-bottom: 40px;
+}
+
+#top-header a{
+  text-decoration: none;
+}
+
+/* Navigation bar */
+nav {
+  background-color: black; /* set the background color */
+  overflow: hidden; /* to clear floats */
+  color: white;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+
+}
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+}
+
+nav li {
+  display: flex;
+  margin: 0 80px;
+ }
+
+ /* Body */
+body{
+  max-width: 1080px;
+  margin: auto;
+  background: rgb(255, 255, 255);
+  padding: 20px;
+  border: 4px solid rgb(2, 175, 209);
+}
+html{
+  background-image: url("../images/site/checkerboard.jpg");
+  padding: 10px;
+}

@@ -1,5 +1,5 @@
 /* ******************************************
- * This server.js file is the primary file of the 
+ * This server.js file is the primary file of the
  * application. It is used to control the project.
  *******************************************/
 /* ***********************
@@ -8,11 +8,24 @@
 const express = require("express")
 const env = require("dotenv").config()
 const app = express()
+const expressLayouts = require("express-ejs-layouts")
+
+/* ***********************
+ * Views Engine and Templates
+ *************************/
+app.set("view engine","ejs")
+app.use(expressLayouts)
+app.set("layout", "./layouts/layout") // not at views root
 
 /* ***********************
  * Routes
  *************************/
 app.use(require("./routes/static"))
+
+// Index route
+app.get("/", function(req, res){
+  res.render("index", {title: "Home"})
+})
 
 /* ***********************
  * Local Server Information
